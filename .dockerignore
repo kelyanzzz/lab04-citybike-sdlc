@@ -1,0 +1,21 @@
+# Never send these into the build context / image
+node_modules
+dist
+.git
+.gitignore
+.gitattributes
+.github
+.vscode
+.idea
+.env
+.env.*
+*.log
+npm-debug.log*
+coverage
+Dockerfile*
+docker/
+.dockerignore
+README.md
+evidence/
+.DS_Store
+Thumbs.db

@@ -1,7 +1,9 @@
-# Mission 2 - naive single-stage Dockerfile (on purpose: no cache order, no .dockerignore)
+# Mission 3 step 1 - cache-friendly order: dependencies before source
 FROM node:20
-COPY . .
+WORKDIR /app
+COPY package.json package-lock.json ./
 RUN npm ci
+COPY . .
 RUN npm run build
 EXPOSE 4173
 CMD ["node", "server.js"]
